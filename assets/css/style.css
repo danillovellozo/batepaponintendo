@@ -1,0 +1,855 @@
+:root {
+  --cor-primaria: #e4000f;
+  --cor-primaria-hover: #c40010;
+  --cor-fundo: #121214;
+  --cor-fundo-card: #1c1c20;
+  --cor-fundo-card-hover: #26262c;
+  --cor-borda: #2e2e34;
+  --cor-texto: #f5f5f7;
+  --cor-texto-secundario: #a5a5ad;
+
+  --cor-youtube: #ff0000;
+  --cor-twitter: #ffffff;
+  --cor-instagram: #e1306c;
+  --cor-telegram: #29a9eb;
+  --cor-whatsapp: #25d366;
+
+  --raio-borda: 16px;
+  --fonte-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-base);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 24px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Menu principal */
+
+.nav-principal {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(18, 18, 20, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 14px 16px;
+  margin-bottom: 28px;
+}
+
+.nav-principal__link {
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-principal__link:hover {
+  color: var(--cor-texto);
+  background: var(--cor-fundo-card);
+}
+
+.nav-principal__link.ativo {
+  color: #fff;
+  background: var(--cor-primaria);
+}
+
+/* Logo */
+
+.logo-placeholder,
+.logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(228, 0, 15, 0.35);
+}
+
+.logo-placeholder {
+  background: var(--cor-primaria);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.logo {
+  object-fit: cover;
+  background: var(--cor-primaria);
+}
+
+.logo--contida {
+  object-fit: contain;
+  padding: 16px;
+}
+
+/* Cabeçalho */
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.98rem;
+}
+
+/* Etiqueta pequena de destaque */
+
+.tag {
+  display: inline-block;
+  background: var(--cor-primaria);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease;
+}
+
+a.tag:hover {
+  background: var(--cor-primaria-hover);
+}
+
+/* Hero de hype (home) */
+
+.hero-hype {
+  width: 100%;
+  background: linear-gradient(135deg, var(--cor-fundo-card), var(--cor-fundo));
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-borda);
+  padding: 26px 22px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.hero-hype h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.hero-hype p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.92rem;
+  margin-bottom: 18px;
+  max-width: 480px;
+}
+
+.hero-hype__cta {
+  display: inline-block;
+  background: var(--cor-primaria);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-hype__cta:hover {
+  background: var(--cor-primaria-hover);
+}
+
+/* Lista de links/cards */
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-borda);
+  padding: 16px 18px;
+  color: var(--cor-texto);
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  background-color: var(--cor-fundo-card-hover);
+  transform: translateY(-2px);
+}
+
+.card:active {
+  transform: translateY(0);
+}
+
+.card__icone {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.card__logo {
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.card__texto {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.card--youtube .card__icone { color: var(--cor-youtube); }
+.card--twitter .card__icone { color: var(--cor-twitter); }
+.card--instagram .card__icone { color: var(--cor-instagram); }
+.card--telegram .card__icone { color: var(--cor-telegram); }
+.card--whatsapp .card__icone { color: var(--cor-whatsapp); }
+
+/* Card em destaque (NintenDrops) */
+
+.card--destaque {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-hover));
+  border: none;
+  margin-top: 8px;
+  padding: 18px;
+}
+
+.card--destaque .card__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card--destaque .card__titulo {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.card--destaque .card__subtitulo {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.card--destaque .card__icone {
+  color: #fff;
+}
+
+/* Card do sorteio (página NintenDrops) */
+
+.card--sorteio {
+  position: relative;
+  overflow: hidden;
+  margin-top: 8px;
+  padding-right: 120px;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-hover));
+  border: 2px solid rgba(255, 60, 75, 0.6);
+  animation: neon-dimming 1.8s ease-in-out infinite;
+}
+
+@keyframes neon-dimming {
+  0%, 100% {
+    border-color: rgba(255, 60, 75, 0.45);
+    box-shadow: 0 0 6px 0 rgba(255, 45, 60, 0.35);
+  }
+  50% {
+    border-color: #ff8a94;
+    box-shadow: 0 0 16px 2px rgba(255, 45, 60, 0.85);
+  }
+}
+
+.card--sorteio .card__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card--sorteio .card__titulo {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.card--sorteio .card__subtitulo {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card--sorteio .badge-ativo {
+  align-self: flex-start;
+  background: rgba(18, 18, 20, 0.4);
+}
+
+.card--sorteio__amiibo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  object-fit: cover;
+  object-position: center 30%;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 30%);
+  mask-image: linear-gradient(to right, transparent, black 30%);
+}
+
+.badge-ativo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 18, 20, 0.55);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 4px;
+}
+
+.badge-ativo__ponto {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ddc6f;
+  animation: pulso-ativo 1.6s infinite;
+}
+
+@keyframes pulso-ativo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* Próximo lançamento (página NintenDrops) */
+
+.lancamento {
+  display: block;
+  width: 100%;
+  border-radius: var(--raio-borda);
+  border: 1px solid var(--cor-borda);
+  padding: 24px 20px;
+  margin: 24px 0;
+  text-align: left;
+  text-decoration: none;
+  color: var(--cor-texto);
+  background-image:
+    linear-gradient(180deg, rgba(18, 18, 20, 0.4), var(--cor-fundo) 90%),
+    url("../img/fire-emblem-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.15s ease;
+}
+
+.lancamento:hover {
+  transform: translateY(-2px);
+}
+
+.lancamento__conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.lancamento__caixa {
+  width: 140px;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.6));
+}
+
+.lancamento__texto h2 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.lancamento__texto p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+}
+
+/* Destaques/números (página NintenDrops) */
+
+.destaques {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.destaques li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.destaques li::before {
+  content: "✓";
+  color: var(--cor-primaria);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Botões grandes (página NintenDrops) */
+
+.botoes-grandes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.botao-grande {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 18px;
+  border-radius: var(--raio-borda);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.botao-grande:hover,
+.botao-grande:focus-visible {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.botao-grande:active {
+  transform: translateY(0);
+}
+
+.botao-grande svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.botao-grande--telegram {
+  background-color: var(--cor-telegram);
+}
+
+.botao-grande--whatsapp {
+  background-color: var(--cor-whatsapp);
+}
+
+/* Texto informativo */
+
+.texto-info {
+  color: var(--cor-texto-secundario);
+  text-align: center;
+  font-size: 0.92rem;
+  margin-top: 20px;
+}
+
+.link-voltar {
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.link-voltar:hover {
+  color: var(--cor-texto);
+}
+
+/* Card de chamada para a página Sobre (home) */
+
+.sobre-teaser {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 200px;
+  margin-top: 24px;
+  border-radius: var(--raio-borda);
+  border: 1px solid var(--cor-borda);
+  overflow: hidden;
+  padding: 20px;
+  text-decoration: none;
+  background-image:
+    linear-gradient(180deg, rgba(18, 18, 20, 0) 35%, rgba(18, 18, 20, 0.95) 92%),
+    url("../img/foto-danillo-super-nintendo-world.jpg");
+  background-size: cover;
+  background-position: center 68%;
+  transition: transform 0.15s ease;
+}
+
+.sobre-teaser:hover {
+  transform: translateY(-2px);
+}
+
+.sobre-teaser__conteudo h2 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.sobre-teaser__conteudo p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.88rem;
+}
+
+/* Página Sobre */
+
+.sobre {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+
+.sobre__foto {
+  width: 100%;
+  max-width: 280px;
+  align-self: center;
+  border-radius: var(--raio-borda);
+  object-fit: cover;
+}
+
+.sobre__conteudo h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.sobre__conteudo p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.sobre__conteudo h2 {
+  font-size: 1.1rem;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.sobre__redes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sobre__redes a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sobre__redes svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.sobre__redes a:hover {
+  color: var(--cor-primaria);
+}
+
+/* Widget de sorteio (Gleam) */
+
+.sorteio-widget {
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* Comparativo Telegram x WhatsApp */
+
+.comparativo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.comparativo__coluna h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.comparativo__coluna ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comparativo__coluna li {
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+  padding-left: 16px;
+  position: relative;
+}
+
+.comparativo__coluna li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--cor-primaria);
+}
+
+/* Rodapé */
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  font-size: 0.82rem;
+}
+
+.footer a {
+  color: var(--cor-texto-secundario);
+}
+
+/* Telas maiores */
+
+@media (min-width: 600px) {
+  body {
+    padding-top: 56px;
+  }
+
+  .header h1 {
+    font-size: 1.9rem;
+  }
+
+  .card,
+  .botao-grande {
+    padding: 18px 22px;
+  }
+}
+
+/* Desktop: usa mais a largura da tela */
+
+@media (min-width: 960px) {
+  .nav-principal {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .nav-principal__link {
+    font-size: 1rem;
+    padding: 11px 20px;
+  }
+
+  .container {
+    max-width: 880px;
+  }
+
+  .logo {
+    width: 128px;
+    height: 128px;
+  }
+
+  .header h1 {
+    font-size: 2.4rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 26px;
+  }
+
+  .card__icone {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card--destaque {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sobre-teaser {
+    min-height: 280px;
+    padding: 28px;
+  }
+
+  .card--sorteio {
+    flex-direction: row;
+    align-items: center;
+    padding-right: 200px;
+  }
+
+  .card--sorteio__amiibo {
+    width: 200px;
+  }
+
+  .sobre-teaser__conteudo h2 {
+    font-size: 1.5rem;
+  }
+
+  .sobre-teaser__conteudo p {
+    font-size: 1rem;
+  }
+
+  .botoes-grandes {
+    flex-direction: row;
+  }
+
+  .botao-grande {
+    padding: 22px;
+    font-size: 1.15rem;
+  }
+
+  .comparativo {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .comparativo__coluna {
+    flex: 1;
+  }
+
+  .container--largo {
+    max-width: 1040px;
+  }
+
+  .hero-hype {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-image:
+      linear-gradient(90deg, var(--cor-fundo) 38%, rgba(18, 18, 20, 0.65) 62%, rgba(18, 18, 20, 0) 100%),
+      url("../img/ocarina-of-time-art.jpg");
+    background-repeat: no-repeat;
+    background-position: right center, right center;
+    background-size: cover, contain;
+  }
+
+  .hero-hype__conteudo {
+    max-width: 460px;
+  }
+
+  .hero-hype h2 {
+    font-size: 1.9rem;
+  }
+
+  .hero-hype p {
+    font-size: 1rem;
+  }
+
+  .destaques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 24px;
+  }
+
+  .lancamento {
+    padding: 36px;
+  }
+
+  .lancamento__conteudo {
+    flex-direction: row;
+    text-align: left;
+    gap: 32px;
+  }
+
+  .lancamento__caixa {
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  .lancamento__texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .lancamento__texto p {
+    font-size: 1rem;
+    max-width: 420px;
+  }
+
+  .sobre {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .sobre__foto {
+    max-width: 340px;
+    flex-shrink: 0;
+  }
+
+  .sobre__conteudo h1 {
+    font-size: 2.1rem;
+  }
+}
