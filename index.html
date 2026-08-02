@@ -12,13 +12,30 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <nav class="nav-principal">
+    <a class="nav-principal__link ativo" href="./">Página Inicial</a>
+    <a class="nav-principal__link" href="nintendrops/">NintenDrops</a>
+    <a class="nav-principal__link" href="sobre/">Sobre</a>
+  </nav>
+
   <div class="container">
-    <img class="logo" src="assets/img/logo-bpn.png" alt="Logo Bate-Papo Nintendo">
+    <a href="https://www.youtube.com/@BatePapoNintendo" target="_blank" rel="noopener">
+      <img class="logo" src="assets/img/logo-bpn.png" alt="Logo Bate-Papo Nintendo — abre o canal no YouTube">
+    </a>
 
     <header class="header">
       <h1>Bate-Papo Nintendo</h1>
-      <p>Tudo sobre o universo Nintendo, direto no seu canal favorito</p>
+      <p>O seu canal favorito sobre Nintendo.<br>Os principais assuntos, notícias com opinião e as melhores reações.</p>
     </header>
+
+    <section class="hero-hype">
+      <div class="hero-hype__conteudo">
+        <a class="tag" href="nintendrops/">Garanta sua mídia física e pague mais barato</a>
+        <h2>The Legend of Zelda: Ocarina of Time está de volta</h2>
+        <p>O clássico que marcou uma geração ganhou remake e chega ainda em 2026. Fique de olho: as melhores ofertas de pré-venda caem primeiro no NintenDrops.</p>
+        <a class="hero-hype__cta" href="nintendrops/">Quero ser avisado das ofertas</a>
+      </div>
+    </section>
 
     <nav class="links" aria-label="Links do canal">
       <a class="card card--youtube" href="https://www.youtube.com/@BatePapoNintendo" target="_blank" rel="noopener">
@@ -43,18 +60,23 @@
       </a>
 
       <a class="card card--destaque" href="nintendrops/">
-        <svg class="card__icone" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M17.6 5.8A2 2 0 0 0 16 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h11a2 2 0 0 0 1.6-.8L22 12l-4.4-6.2ZM8 13.5A1.5 1.5 0 1 1 8 10.5a1.5 1.5 0 0 1 0 3Z"/>
-        </svg>
+        <img class="card__logo" src="assets/img/logo-nintendrops-transparente.png" alt="Logo NintenDrops">
         <span class="card__texto">
           <span class="card__titulo">NintenDrops</span>
-          <span class="card__subtitulo">Grupo gratuito de ofertas Nintendo</span>
+          <span class="card__subtitulo">O grupo gratuito de ofertas do canal Bate-Papo Nintendo</span>
         </span>
       </a>
     </nav>
 
+    <a class="sobre-teaser" href="sobre/">
+      <div class="sobre-teaser__conteudo">
+        <h2>Quem está por trás do canal</h2>
+        <p>Conheça o Danillo, criador do Bate-Papo Nintendo</p>
+      </div>
+    </a>
+
     <footer class="footer">
-      <p>&copy; <span id="ano"></span> Bate-Papo Nintendo</p>
+      <p>&copy; <span id="ano"></span> Bate-Papo Nintendo · <a href="sobre/">Sobre</a></p>
     </footer>
   </div>
 

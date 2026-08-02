@@ -13,7 +13,7 @@ Site estático: HTML5 + CSS puro + um pouquinho de JavaScript vanilla. Sem frame
 │   └── index.html          # Página do NintenDrops: acesso ao Telegram e WhatsApp
 ├── assets/
 │   ├── css/
-│   │   └── style.css       # Estilos e variáveis de cor (:root) — troque a paleta aqui
+│   │   └── style.css       # Estilos e variáveis de cor (:root). Troque a paleta aqui
 │   ├── img/                # Logos e imagens (a preencher)
 │   └── js/
 │       └── main.js         # JS mínimo (ano do rodapé)
