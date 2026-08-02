@@ -82,6 +82,36 @@ body {
   background: var(--cor-primaria);
 }
 
+/* Logo + QR Code (página NintenDrops) */
+
+.nintendrops-topo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.nintendrops-topo .logo {
+  margin-bottom: 0;
+}
+
+.nintendrops-topo__qr {
+  width: 96px;
+  height: 96px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 16px rgba(228, 0, 15, 0.35);
+}
+
+.nintendrops-topo__legenda {
+  color: var(--cor-texto-secundario);
+  font-size: 0.82rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 /* Logo */
 
 .logo-placeholder,
@@ -156,13 +186,27 @@ a.tag:hover {
 /* Hero de hype (home) */
 
 .hero-hype {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   background: linear-gradient(135deg, var(--cor-fundo-card), var(--cor-fundo));
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio-borda);
-  padding: 26px 22px;
+  padding: 26px 100px 26px 22px;
   margin-bottom: 28px;
   text-align: left;
+}
+
+.hero-hype__arte {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 110px;
+  object-fit: cover;
+  object-position: center 22%;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 35%);
+  mask-image: linear-gradient(to right, transparent, black 35%);
 }
 
 .hero-hype h2 {
@@ -374,8 +418,8 @@ a.tag:hover {
   width: 100%;
   border-radius: var(--raio-borda);
   border: 1px solid var(--cor-borda);
-  padding: 24px 20px;
-  margin: 24px 0;
+  padding: 14px 16px;
+  margin: 16px 0;
   text-align: left;
   text-decoration: none;
   color: var(--cor-texto);
@@ -394,25 +438,26 @@ a.tag:hover {
 
 .lancamento__conteudo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 16px;
-  text-align: center;
+  gap: 14px;
+  text-align: left;
 }
 
 .lancamento__caixa {
-  width: 140px;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.6));
+  width: 68px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
 }
 
 .lancamento__texto h2 {
-  font-size: 1.15rem;
-  margin-bottom: 8px;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
 }
 
 .lancamento__texto p {
   color: var(--cor-texto-secundario);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Destaques/números (página NintenDrops) */
@@ -783,6 +828,15 @@ a.tag:hover {
     max-width: 1040px;
   }
 
+  .nintendrops-topo__qr {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nintendrops-topo__legenda {
+    font-size: 0.9rem;
+  }
+
   .hero-hype {
     min-height: 320px;
     display: flex;
@@ -794,6 +848,10 @@ a.tag:hover {
     background-repeat: no-repeat;
     background-position: right center, right center;
     background-size: cover, contain;
+  }
+
+  .hero-hype__arte {
+    display: none;
   }
 
   .hero-hype__conteudo {
