@@ -332,7 +332,6 @@ a.tag:hover {
   position: relative;
   overflow: hidden;
   margin-top: 8px;
-  padding-right: 120px;
   background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-hover));
   border: 2px solid rgba(255, 60, 75, 0.6);
   animation: neon-dimming 1.8s ease-in-out infinite;
@@ -369,18 +368,6 @@ a.tag:hover {
 .card--sorteio .badge-ativo {
   align-self: flex-start;
   background: rgba(18, 18, 20, 0.4);
-}
-
-.card--sorteio__amiibo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 120px;
-  object-fit: cover;
-  object-position: center 30%;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 30%);
-  mask-image: linear-gradient(to right, transparent, black 30%);
 }
 
 .badge-ativo {
@@ -791,11 +778,6 @@ a.tag:hover {
   .card--sorteio {
     flex-direction: row;
     align-items: center;
-    padding-right: 200px;
-  }
-
-  .card--sorteio__amiibo {
-    width: 200px;
   }
 
   .sobre-teaser__conteudo h2 {
