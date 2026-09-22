@@ -412,7 +412,7 @@ a.tag:hover {
   color: var(--cor-texto);
   background-image:
     linear-gradient(180deg, rgba(18, 18, 20, 0.4), var(--cor-fundo) 90%),
-    url("../img/fire-emblem-bg.jpg");
+    url("../img/switch-sports-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
